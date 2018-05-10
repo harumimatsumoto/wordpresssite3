@@ -59,11 +59,7 @@
   <div class="l-wrapper">
 	
     <!-- l-main -->
-    <main class="l-main<?php if ( get_option('fit_theme_pageLayout') == 'value2' ):?> l-main-single
-    <?php if ( get_option('fit_theme_singleWidth') == 'value2' ):?> l-main-w740<?php endif; ?>
-    <?php if ( get_option('fit_theme_singleWidth') == 'value3' ):?> l-main-w900<?php endif; ?>
-    <?php if ( get_option('fit_theme_singleWidth') == 'value4' ):?> l-main-w100<?php endif; ?>
-    <?php endif; ?>">
+    <main class="l-main l-main-single">
 	  
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <section class="content content-page">

@@ -2546,7 +2546,7 @@ function fit_head() {
 .infoHead{background-color:'.$infoHeadColor.';}'."\n";
 	}
 	
-	if (is_front_page() && get_option('fit_function_pickup') == 'value2') {
+	if (is_home() && !is_paged() && get_option('fit_function_pickup') == 'value2') {
 		$args = array(
 	      'numberposts' => '3',
 		  'post_type'   => 'post',

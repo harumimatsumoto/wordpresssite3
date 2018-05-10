@@ -41,3 +41,24 @@ Stack trace:
 [06-May-2018 14:33:08 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-admin/includes/plugin-install.php on line 168
 [06-May-2018 15:28:51 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /app/public/wp-content/themes/lionmedia/page-top.php on line 65
 [06-May-2018 15:29:01 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /app/public/wp-content/themes/lionmedia/page-top.php on line 65
+[09-May-2018 11:14:35 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[09-May-2018 11:14:35 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[09-May-2018 11:14:35 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671
+[09-May-2018 11:14:41 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[09-May-2018 11:14:41 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[09-May-2018 11:14:41 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671
+[09-May-2018 11:15:13 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[09-May-2018 11:15:13 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[09-May-2018 11:15:13 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671
+[09-May-2018 11:34:03 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[09-May-2018 11:34:03 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[09-May-2018 11:34:03 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671
+[09-May-2018 11:34:14 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[09-May-2018 11:34:14 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[09-May-2018 11:34:14 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671
+[09-May-2018 11:34:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[09-May-2018 11:34:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[09-May-2018 11:34:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671
+[10-May-2018 11:21:48 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1621
+[10-May-2018 11:21:48 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1646
+[10-May-2018 11:21:48 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /app/public/wp-content/plugins/super-socializer/super_socializer.php on line 1671

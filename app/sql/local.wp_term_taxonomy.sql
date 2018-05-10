@@ -2,4 +2,9 @@
 /*!40014 SET FOREIGN_KEY_CHECKS=0*/;
 /*!40103 SET TIME_ZONE='+00:00' */;
 INSERT INTO `wp_term_taxonomy` VALUES
-(1,1,"category","",0,1);
+(1,1,"category","",0,0),
+(2,2,"category","好きなことを見つける",0,4),
+(3,3,"category","自分を受け入れる",2,0),
+(4,4,"category","自分を知る",2,0),
+(5,5,"category","実践する",2,0),
+(6,6,"nav_menu","",0,4);
