@@ -59,23 +59,42 @@
   <div class="l-wrapper">
 	
     <!-- l-main -->
-    <main class="l-main l-main-single">
-	  
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <section class="content content-page">
-	    <?php the_content(); ?>
-      </section>
-	  <?php endwhile; endif; ?>
-      </article> 
-    
-    <?php if (is_active_sidebar('toppage-bottom')) : ?>
-        <?php dynamic_sidebar( 'toppage-bottom' ); ?>
-	  <?php endif; ?>
- 
+    <main class="l-main<?php if ( get_option('fit_theme_pageLayout') == 'value2' ):?> l-main-single
+    <?php if ( get_option('fit_theme_singleWidth') == 'value2' ):?> l-main-w740<?php endif; ?>
+    <?php if ( get_option('fit_theme_singleWidth') == 'value3' ):?> l-main-w900<?php endif; ?>
+    <?php if ( get_option('fit_theme_singleWidth') == 'value4' ):?> l-main-w100<?php endif; ?>
+    <?php endif; ?>">
       
+    <article>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <section class="content content-page">
+      <?php the_content(); ?>
+      </section>
+      <?php endwhile; endif; ?>
+        </article> 
+      
+      <?php if (is_active_sidebar('toppage-bottom')) : ?>
+          <?php dynamic_sidebar( 'toppage-bottom' ); ?>
+      <?php endif; ?>
+      <a href="https://www.instagram.com/harumi_matsumot?ref=badge" class="insta_btn2">
+        <span>Follow Me</span>
+      </a>
+      <a href="https://twitter.com/matumoto_harumi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @matumoto_harumi</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a href ="https://www.facebook.com/profile.php?id=100026025484977" class="fb_btn">
+        <span>Follow Me</span>
+      </a>
+      </article>
     </main>
     <!-- /l-main -->
     
+    <?php if ( get_option('fit_theme_pageLayout') != 'value2' ):?>
+    <!-- l-sidebar -->
+      <?php dynamic_sidebar('toppage-sidebar'); ?>
+    <!-- /l-sidebar -->
+	
+  <?php endif; ?>
+  
   </div>
   <!-- /l-wrapper -->
 

@@ -2546,7 +2546,7 @@ function fit_head() {
 .infoHead{background-color:'.$infoHeadColor.';}'."\n";
 	}
 	
-	if (is_home() && !is_paged() && get_option('fit_function_pickup') == 'value2') {
+	if (is_front_page() && get_option('fit_function_pickup') == 'value2') {
 		$args = array(
 	      'numberposts' => '3',
 		  'post_type'   => 'post',
@@ -4980,11 +4980,20 @@ function arphabet_widgets_init() {
 	));
 	register_sidebar( array(
 		'name' => 'トップページ下部コンテンツ',
-		'description' => 'フッターの右にコンテンツを表示します。',
+		'description' => 'トップページのコンテンツ下部にコンテンツを表示します。',
 		'id' => 'toppage-bottom',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="heading heading-footer">',
+		'after_title' => '</h2>',
+	));
+	register_sidebar( array(
+		'name' => 'トップページサイドバーエリア',
+		'description' => 'サイドバーにコンテンツを表示します。',
+		'id' => 'toppage-sidebar',
+		'before_widget' => '<aside class="widget">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h2 class="heading heading-widget">',
 		'after_title' => '</h2>',
 	));
 }
@@ -5135,6 +5144,146 @@ class Popular_Posts extends WP_Widget {
 }
 add_action( 'widgets_init', create_function( '', 'return register_widget( "Popular_Posts" );' ) );
 
+
+
+//////////////////////////////////////////////////
+//Twitterフォローボタン
+//////////////////////////////////////////////////
+class TwitterWidgetItemClass extends WP_Widget {
+	function __construct() {
+		$widget_option = array('description' => 'Twitterフォローボタンの設置');
+		parent::__construct( false, $name = 'Twitterフォローボタン', $widget_option );
+	}
+ 
+	// 設定を表示するメソッド
+	function widget( $args, $instance ) {
+		extract( $args );
+ 
+		echo $before_widget;
+
+		// 本文を取得
+		$body = $instance[ 'body' ];
+		if( $body != '' ) {
+			echo '<a href="'.$body.'">'; 
+		}
+		echo '<div class="twitterWidget">';
+		echo '<h2 class="fb_btn">Twitterフォローボタン</h2></div>';
+		echo '</a>';
+		echo $after_widget;
+ 
+	}
+	
+	// 設定を保存するメソッド
+	function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+	
+	// 設定フォームを出力するメソッド
+	function form( $instance ) {
+		?>
+        <p>
+          <label for="<?php echo $this->get_field_id('body'); ?>">TwitterURL:</label>
+          <input type="text" id="<?php echo $this->get_field_id('body'); ?>" name="<?php echo $this->get_field_name('body'); ?>" value= "<?php echo esc_attr($instance['body']);?>">
+		</p>
+		<?php
+	}
+ 
+}
+add_action( 'widgets_init', create_function( '', 'return register_widget( "TwitterWidgetItemClass" );' ) );
+
+
+
+//////////////////////////////////////////////////
+//Facebookフォローボタン
+//////////////////////////////////////////////////
+class FacebookWidgetItemClass extends WP_Widget {
+	function __construct() {
+		$widget_option = array('description' => 'Facebookフォローボタンの設置');
+		parent::__construct( false, $name = 'Facebookフォローボタン', $widget_option );
+	}
+ 
+	// 設定を表示するメソッド
+	function widget( $args, $instance ) {
+		extract( $args );
+ 
+		echo $before_widget;
+
+		// 本文を取得
+		$body = $instance[ 'body' ];
+		if( $body != '' ) {
+			echo '<a href="'.$body.'">'; 
+		}
+		echo '<div class="FbWidget">';
+		echo '<h2 class="fb_btn">Facebookフォローボタン</h2></div>';
+		echo '</a>';
+		echo $after_widget;
+ 
+	}
+	
+	// 設定を保存するメソッド
+	function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+	
+	// 設定フォームを出力するメソッド
+	function form( $instance ) {
+		?>
+        <p>
+          <label for="<?php echo $this->get_field_id('body'); ?>">FacebookURL:</label>
+          <input type="text" id="<?php echo $this->get_field_id('body'); ?>" name="<?php echo $this->get_field_name('body'); ?>" value= "<?php echo esc_attr($instance['body']);?>">
+		</p>
+		<?php
+	}
+ 
+}
+add_action( 'widgets_init', create_function( '', 'return register_widget( "FacebookWidgetItemClass" );' ) );
+
+
+
+//////////////////////////////////////////////////
+//Instagramフォローボタン
+//////////////////////////////////////////////////
+class InstagramWidgetItemClass extends WP_Widget {
+	function __construct() {
+		$widget_option = array('description' => 'Instagramフォローボタンの設置');
+		parent::__construct( false, $name = 'Instagramフォローボタン', $widget_option );
+	}
+ 
+	// 設定を表示するメソッド
+	function widget( $args, $instance ) {
+		extract( $args );
+ 
+		echo $before_widget;
+
+		// 本文を取得
+		$body = $instance[ 'body' ];
+		if( $body != '' ) {
+			echo '<a href="'.$body.'">'; 
+		}
+		echo '<div class="twitterWidget">';
+		echo '<h2 class="fb_btn">Instagramフォローボタン</h2></div>';
+		echo '</a>';
+		echo $after_widget;
+ 
+	}
+	
+	// 設定を保存するメソッド
+	function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
+	
+	// 設定フォームを出力するメソッド
+	function form( $instance ) {
+		?>
+        <p>
+          <label for="<?php echo $this->get_field_id('body'); ?>">InstagramURL:</label>
+          <input type="text" id="<?php echo $this->get_field_id('body'); ?>" name="<?php echo $this->get_field_name('body'); ?>" value= "<?php echo esc_attr($instance['body']);?>">
+		</p>
+		<?php
+	}
+ 
+}
+add_action( 'widgets_init', create_function( '', 'return register_widget( "InstagramWidgetItemClass" );' ) );
 
 
 
